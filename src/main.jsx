@@ -20,7 +20,7 @@ const competencies = [
 ]
 const jobs = [
   {
-    company:'PUKAT TECHNOLOGY PVT LTD', location:'Lahore, Pakistan', role:'Manager Accounts & Finance', period:'April 2021 – Present',
+    company:'PUKAT TECHNOLOGY PVT LTD', location:'Lahore, Pakistan', role:'Manager Finance & Accounts', period:'April 2021 – Present',
     bullets:[
       'Manage day-to-day finance and accounting operations, including AP, AR, general ledger and reconciliations.',
       'Prepare and review monthly, quarterly and annual financial reports and management accounts.',
@@ -32,7 +32,7 @@ const jobs = [
       'Review invoices, expenses, payroll-related financial matters and vendor/customer balances.',
       'Coordinate with banks, auditors, tax agents, clients and other stakeholders on financial matters.',
       'Identify financial risks, improve accounting processes and support cost control and operational efficiency.',
-      'Supervise and guide the Accounts & Finance team, ensuring timely completion of assigned tasks.',
+      'Supervise and guide the Finance & Accounts team, ensuring timely completion of assigned tasks.',
       'Support senior management in financial planning, decision-making and business analysis.'
     ]
   },
@@ -112,7 +112,7 @@ function App(){
   useEffect(()=>{AOS.init({duration:750,once:true,offset:70})},[])
   return <div className="app">
     <motion.div className="scroll-progress" style={{scaleX}}/>
-    <header><nav className="nav-wrap"><a href="#home" className="brand"><span>FS</span><div><b>Farhan Siddiqui</b><small>Accounts & Finance</small></div></a><button className="menu" onClick={()=>setOpen(!open)}>{open?<FaTimes/>:<FaBars/>}</button><div className={`navlinks ${open?'open':''}`}>{nav.map(n=><a key={n} onClick={()=>setOpen(false)} href={`#${n.toLowerCase()}`}>{n}</a>)}<a className="nav-cta" href="/Farhan-Siddiqui/Muhammad_Farhan_Siddiqui_CV.pdf" download><FaDownload/> CV</a></div></nav></header>
+    <header><nav className="nav-wrap"><a href="#home" className="brand"><span>FS</span><div><b>Farhan Siddiqui</b><small>Finance & Accounts</small></div></a><button className="menu" onClick={()=>setOpen(!open)}>{open?<FaTimes/>:<FaBars/>}</button><div className={`navlinks ${open?'open':''}`}>{nav.map(n=><a key={n} onClick={()=>setOpen(false)} href={`#${n.toLowerCase()}`}>{n}</a>)}<a className="nav-cta" href="/Farhan-Siddiqui/Muhammad_Farhan_Siddiqui_CV.pdf" download><FaDownload/> CV</a></div></nav></header>
 
     <main>
       <section id="home" className="hero section-bg hero-bg">
@@ -121,7 +121,7 @@ function App(){
         <div className="container hero-grid">
           <motion.div initial={{opacity:0,x:-30}} animate={{opacity:1,x:0}} transition={{duration:.8}} className="hero-copy">
             <p className="eyebrow">Finance leadership • Reporting • Controls</p>
-            <h1>Muhammad Farhan <span>Siddiqui</span></h1><h2>Manager Accounts & Finance</h2>
+            <h1>Muhammad Farhan <span>Siddiqui</span></h1><h2>Manager Finance & Accounts</h2>
             <p className="lead">Helping organisations strengthen financial reporting, reconciliation, controls and management visibility through practical, business-focused finance.</p>
             <div className="actions"><a className="btn primary" href="/Farhan-Siddiqui/Muhammad_Farhan_Siddiqui_CV.pdf" download><FaDownload/> Download CV</a><a className="btn secondary" href="#contact">Contact Me</a><a className="icon-btn" href="https://www.linkedin.com/in/fmh190" target="_blank" rel="noreferrer"><FaLinkedinIn/></a></div>
             <div className="tech-tags"><span>SAP Business One</span><span>One ERP</span><span>Xero</span><span>Advanced Excel</span></div>
@@ -137,7 +137,7 @@ function App(){
         </div>
       </section>
 
-      <section id="about" className="section section-bg about-bg"><div className="container split about-dashboard"><div data-aos="fade-up"><p className="eyebrow">About Me</p><h2 className="section-title">Practical finance leadership backed by 9+ years of experience.</h2><p className="body-copy">Finance and Accounts professional with 9+ years of experience across fintech, technology, construction and textile industries, currently serving as Manager Accounts & Finance at Pukat Technology Pvt Ltd. Strong experience in financial accounting, management reporting, bank and balance sheet reconciliations, AP/AR, cash management, taxation, ERP operations and fintech partner settlements. Hands-on expertise in SAP Business One, Xero and One ERP systems.</p><div className="bio-grid"><span><FaMapMarkerAlt/><b>Lahore, Pakistan</b></span><span><FaBriefcase/><b>Manager Accounts & Finance</b></span><span><FaGraduationCap/><b>BBA (Hons) – Finance</b></span><span><FaGlobe/><b>English • Urdu • Pashto</b></span></div></div><div className="about-chart" data-aos="zoom-in"><Dashboard/></div></div></section>
+      <section id="about" className="section section-bg about-bg"><div className="container split about-dashboard"><div data-aos="fade-up"><p className="eyebrow">About Me</p><h2 className="section-title">Practical finance leadership backed by 9+ years of experience.</h2><p className="body-copy">Finance and Accounts professional with 9+ years of experience across fintech, technology, construction and textile industries, currently serving as Manager Finance & Accounts at Pukat Technology Pvt Ltd. Strong experience in financial accounting, management reporting, bank and balance sheet reconciliations, AP/AR, cash management, taxation, ERP operations and fintech partner settlements. Hands-on expertise in SAP Business One, Xero and One ERP systems.</p><div className="bio-grid"><span><FaMapMarkerAlt/><b>Lahore, Pakistan</b></span><span><FaBriefcase/><b>Manager Finance & Accounts</b></span><span><FaGraduationCap/><b>BBA (Hons) – Finance</b></span><span><FaGlobe/><b>English • Urdu • Pashto</b></span></div></div><div className="about-chart" data-aos="zoom-in"><Dashboard/></div></div></section>
 
       <section className="stats-strip"><div className="container"><p className="stats-label">Live Professional KPI Counters</p><div className="stats">{[[9,'+','Years Experience'],[4,'','Industries'],[3,'','ERP Platforms'],[12,'+','Core Competencies']].map(([v,s,l],i)=><motion.div key={l} initial={{opacity:0,y:18}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*.1}}><strong><Counter value={v} suffix={s}/></strong><span>{l}</span></motion.div>)}</div></div></section>
 
