@@ -1,0 +1,25 @@
+GITHUB REPOSITORY: Farhan-Siddiqui
+
+Upload ALL files and folders inside this package to the ROOT of the Farhan-Siddiqui repository:
+
+- .github/
+- public/
+- src/
+- index.html
+- package.json
+- postcss.config.js
+- tailwind.config.js
+- vite.config.js
+- README.md
+
+GitHub Pages setup:
+1. Open repository Settings.
+2. Select Pages.
+3. Under Build and deployment, select GitHub Actions.
+4. Push/commit all files to the main branch.
+5. Wait for the deployment action to finish.
+
+Expected website URL:
+https://fs128901-acc.github.io/Farhan-Siddiqui/
+
+Important: Keep the repository capitalization exactly as Farhan-Siddiqui because asset and Vite paths use that name.
