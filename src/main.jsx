@@ -112,7 +112,7 @@ function App(){
   useEffect(()=>{AOS.init({duration:750,once:true,offset:70})},[])
   return <div className="app">
     <motion.div className="scroll-progress" style={{scaleX}}/>
-    <header><nav className="nav-wrap"><a href="#home" className="brand"><span>FS</span><div><b>Farhan Siddiqui</b><small>Finance & Accounts</small></div></a><button className="menu" onClick={()=>setOpen(!open)}>{open?<FaTimes/>:<FaBars/>}</button><div className={`navlinks ${open?'open':''}`}>{nav.map(n=><a key={n} onClick={()=>setOpen(false)} href={`#${n.toLowerCase()}`}>{n}</a>)}<a className="nav-cta" href="/Farhan-Siddiqui/Muhammad_Farhan_Siddiqui_CV.pdf" download><FaDownload/> CV</a></div></nav></header>
+    <header><nav className="nav-wrap"><a href="#home" className="brand"><span>FS</span><div><b>Farhan Siddiqui</b><small>Finance & Accounts</small></div></a><button className="menu" onClick={()=>setOpen(!open)}>{open?<FaTimes/>:<FaBars/>}</button><div className={`navlinks ${open?'open':''}`}>{nav.map(n=><a key={n} onClick={()=>setOpen(false)} href={`#${n.toLowerCase()}`}>{n}</a>)}<a className="nav-cta" href="/Muhammad_Farhan_Siddiqui_CV.pdf" download><FaDownload/> CV</a></div></nav></header>
 
     <main>
       <section id="home" className="hero section-bg hero-bg">
@@ -123,12 +123,12 @@ function App(){
             <p className="eyebrow">Finance leadership • Reporting • Controls</p>
             <h1>Muhammad Farhan <span>Siddiqui</span></h1><h2>Manager Finance & Accounts</h2>
             <p className="lead">Helping organisations strengthen financial reporting, reconciliation, controls and management visibility through practical, business-focused finance.</p>
-            <div className="actions"><a className="btn primary" href="/Farhan-Siddiqui/Muhammad_Farhan_Siddiqui_CV.pdf" download><FaDownload/> Download CV</a><a className="btn secondary" href="#contact">Contact Me</a><a className="icon-btn" href="https://www.linkedin.com/in/fmh190" target="_blank" rel="noreferrer"><FaLinkedinIn/></a></div>
+            <div className="actions"><a className="btn primary" href="/Muhammad_Farhan_Siddiqui_CV.pdf" download><FaDownload/> Download CV</a><a className="btn secondary" href="#contact">Contact Me</a><a className="icon-btn" href="https://www.linkedin.com/in/fmh190" target="_blank" rel="noreferrer"><FaLinkedinIn/></a></div>
             <div className="tech-tags"><span>SAP Business One</span><span>One ERP</span><span>Xero</span><span>Advanced Excel</span></div>
           </motion.div>
           <motion.div className="hero-portrait" initial={{opacity:0,x:35}} animate={{opacity:1,x:0}} transition={{duration:.9}}>
             <div className="portrait-glow"/>
-            <img src="/Farhan-Siddiqui/profile.jpg" alt="Muhammad Farhan Siddiqui"/>
+            <img src="/profile.jpg" alt="Muhammad Farhan Siddiqui"/>
             <motion.div className="hero-name-card" animate={{y:[0,-9,0]}} transition={{duration:4,repeat:Infinity}}>
               <FaChartLine/><div><b>Finance & Accounts</b><small><FaMapMarkerAlt/> Lahore, Pakistan</small></div>
             </motion.div>
