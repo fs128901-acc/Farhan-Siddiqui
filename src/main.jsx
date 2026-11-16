@@ -68,9 +68,9 @@ function Counter({value, suffix=''}) {
 function Dashboard(){
   const bars=[42,66,54,82,70,94,76]
   return <motion.div initial={{opacity:0,y:30}} animate={{opacity:1,y:0}} transition={{duration:.9}} className="dashboard-shell">
-    <div className="dash-top"><div><span className="status-dot"/> Financial Overview</div><span>FY 2026</span></div>
+    <div className="dash-top"><div><span className="status-dot"/> What I Deliver</div><span>Illustrative</span></div>
     <div className="kpi-grid">
-      {[['Revenue','+18.4%'],['Cash Position','Healthy'],['Variance','-3.2%']].map(([a,b],i)=><motion.div key={a} whileHover={{y:-5}} className="kpi"><small>{a}</small><strong>{b}</strong><em>{i===1?'Optimised':'vs prior period'}</em></motion.div>)}
+      {[['Month-End Close','On time','Every period'],['Cash Position','Daily','Monitored'],['Reconciliations','Complete','Bank & ledger']].map(([a,b,c])=><motion.div key={a} whileHover={{y:-5}} className="kpi"><small>{a}</small><strong>{b}</strong><em>{c}</em></motion.div>)}
     </div>
     <div className="chart-card">
       <div className="chart-head"><span>Management Reporting</span><HiOutlineArrowTrendingUp/></div>
@@ -98,7 +98,7 @@ function BalanceSheetVisual(){
 function InvoiceVisual(){
   return <motion.div className="invoice-visual" initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{duration:.7,delay:.1}}>
     <motion.div className="invoice-paper" animate={{y:[0,-7,0],rotate:[0,-1,0]}} transition={{duration:4,repeat:Infinity}}>
-      <div className="invoice-top"><FaFileInvoiceDollar/><div><b>INVOICE</b><small>#FIN-2026-018</small></div><span>PAID</span></div>
+      <div className="invoice-top"><FaFileInvoiceDollar/><div><b>INVOICE</b><small>Sample</small></div><span>PAID</span></div>
       {[['Professional services','75%'],['Tax & compliance','52%'],['Reporting support','64%']].map(([label,width],i)=><div className="invoice-line" key={label}><span>{label}</span><motion.i initial={{width:0}} whileInView={{width}} viewport={{once:true}} transition={{duration:.8,delay:.25+i*.15}}/></div>)}
       <div className="invoice-total"><span>Total processed</span><strong>100%</strong></div>
     </motion.div>
@@ -139,7 +139,7 @@ function App(){
 
       <section id="about" className="section section-bg about-bg"><div className="container split about-dashboard"><div data-aos="fade-up"><p className="eyebrow">About Me</p><h2 className="section-title">Practical finance leadership backed by 9+ years of experience.</h2><p className="body-copy">Finance and Accounts professional with 9+ years of experience across fintech, technology, construction and textile industries, currently serving as Manager Finance & Accounts at Pukat Technology Pvt Ltd. Strong experience in financial accounting, management reporting, bank and balance sheet reconciliations, AP/AR, cash management, taxation, ERP operations and fintech partner settlements. Hands-on expertise in SAP Business One, Xero and One ERP systems.</p><div className="bio-grid"><span><FaMapMarkerAlt/><b>Lahore, Pakistan</b></span><span><FaBriefcase/><b>Manager Finance & Accounts</b></span><span><FaGraduationCap/><b>BBA (Hons) – Finance</b></span><span><FaGlobe/><b>English • Urdu • Pashto</b></span></div></div><div className="about-chart" data-aos="zoom-in"><Dashboard/></div></div></section>
 
-      <section className="stats-strip"><div className="container"><p className="stats-label">Live Professional KPI Counters</p><div className="stats">{[[9,'+','Years Experience'],[4,'','Industries'],[3,'','ERP Platforms'],[12,'+','Core Competencies']].map(([v,s,l],i)=><motion.div key={l} initial={{opacity:0,y:18}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*.1}}><strong><Counter value={v} suffix={s}/></strong><span>{l}</span></motion.div>)}</div></div></section>
+      <section className="stats-strip"><div className="container"><p className="stats-label">At a Glance</p><div className="stats">{[[9,'+','Years Experience'],[4,'','Industries'],[3,'','ERP Platforms'],[12,'+','Core Competencies']].map(([v,s,l],i)=><motion.div key={l} initial={{opacity:0,y:18}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*.1}}><strong><Counter value={v} suffix={s}/></strong><span>{l}</span></motion.div>)}</div></div></section>
 
       <section className="section finance-visuals-bg"><div className="container"><div className="section-heading" data-aos="fade-up"><p className="eyebrow">Finance Visuals</p><h2 className="section-title">Accounting concepts presented with motion and clarity.</h2></div><div className="finance-visuals-grid"><BalanceSheetVisual/><InvoiceVisual/></div></div></section>
 
