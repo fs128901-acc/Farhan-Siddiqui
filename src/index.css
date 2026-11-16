@@ -65,3 +65,5 @@ input:focus,textarea:focus{border-color:var(--emerald);box-shadow:0 0 0 4px rgba
 .dashboard-shell{color:#fff}.kpi{background:rgba(255,255,255,.1)}
 .chart-head{color:var(--navy)}
 .app{overflow-x:clip}
+@media(max-width:980px){.hero-portrait{order:-1}.hero-grid{gap:40px}}
+.hero-experience strong span{font-size:inherit;font-weight:inherit;max-width:none;margin:0}
