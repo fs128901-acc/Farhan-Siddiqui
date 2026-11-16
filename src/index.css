@@ -64,3 +64,4 @@ input:focus,textarea:focus{border-color:var(--emerald);box-shadow:0 0 0 4px rgba
 @media(max-width:620px){.hero-portrait{min-height:520px}.hero-portrait>img{height:480px}.portrait-glow{height:480px;transform:translateX(12px)}}
 .dashboard-shell{color:#fff}.kpi{background:rgba(255,255,255,.1)}
 .chart-head{color:var(--navy)}
+.app{overflow-x:clip}
